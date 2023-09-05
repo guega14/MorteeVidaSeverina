@@ -44,5 +44,8 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-
+    public void SairJogo()
+    {
+        Application.Quit();
+    }
 }

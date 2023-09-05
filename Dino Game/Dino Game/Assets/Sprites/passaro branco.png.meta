@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4e69827a2267d4748bef91a3087205cc
+guid: fe011b41e474535409f042bb1e946889
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -127,7 +127,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: passaro branco_1
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 122
+        width: 25
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc74737ee6d5094da7e7d24447dce2d
+      internalID: 1686806059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +159,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      passaro branco_0: -52231573
+      passaro branco_2: 596002521
+      passaro branco_3: 16261341
+      passaro branco_1: 1686806059
+      passaro branco_5: -1069837343
+      passaro branco_4: -1902126287
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

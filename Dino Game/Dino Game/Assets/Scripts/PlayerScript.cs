@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
+    public static PlayerScript instance; 
     public float JumpForce;
-    float score;
+    public float score;
 
     [SerializeField]
     bool isGrounded = false;
@@ -14,12 +16,15 @@ public class PlayerScript : MonoBehaviour
 
     Rigidbody2D RB;
 
-    public TMP_Text ScoreTxt;
+    public TMP_Text ScoreText;
+    public TMP_Text ScoreTextFinal;
+    public Animator myAnim;
 
     private void Awake()
     {
         RB = GetComponent<Rigidbody2D>();
         score = 0;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -37,10 +42,30 @@ public class PlayerScript : MonoBehaviour
         if (isAlive)
         {
             score += Time.deltaTime * 4;
-            ScoreTxt.text = "SCORE: " + score.ToString("F");
+            ScoreText.text = "PTS: " + score.ToString("F");
         }
+        Animations();
+
     }
 
+    public void Animations()
+    {
+        if (isGrounded)
+        {
+            myAnim.Play("Idle");
+        }
+        else
+        {
+            if(RB.velocity.y> 0)
+            {
+                myAnim.Play("Jump");
+            }
+            else
+            {
+                myAnim.Play("Fall");
+            }
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
@@ -56,6 +81,16 @@ public class PlayerScript : MonoBehaviour
             isAlive = false;
             Time.timeScale = 0;
             gameOverpanel.SetActive(true);
+            ScoreTextFinal.text = "PONTUAÇÃO FINAL: "+ score.ToString("F") + " PONTOS";
         }
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

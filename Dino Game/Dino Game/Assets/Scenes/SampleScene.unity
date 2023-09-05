@@ -2238,13 +2238,14 @@ MonoBehaviour:
   currentBackground: {fileID: 135811385}
   currentGround: {fileID: 2023506010}
   currentAster: {fileID: 1393942996}
-  current: {fileID: 0}
   fundonoite: {fileID: 572702543, guid: b6ddfcf36bb4f5a49b1b74d32d9f1a52, type: 3}
   chaonoite: {fileID: -1765544980, guid: 85ffabb5f05857b4caf25a1e9cef98d7, type: 3}
   lua: {fileID: -163869332, guid: af567dc1fe14eb44b966aa5237e3bcf8, type: 3}
   fundodia: {fileID: 21300000, guid: ecd104d379d3f0a43b1c49a3108ab777, type: 3}
   chaodia: {fileID: -1866351037, guid: e35f2ff202606d14da548b5a777bd257, type: 3}
-  sol: {fileID: 21300000, guid: 62ca27755d5863349992e92164ec14fc, type: 3}
+  sol: {fileID: 1010822295, guid: 62ca27755d5863349992e92164ec14fc, type: 3}
+  passarobranco: {fileID: 1686806059, guid: fe011b41e474535409f042bb1e946889, type: 3}
+  passaropreto: {fileID: 1826831304, guid: 462c0a68a5d0ee5498e6455ecf016579, type: 3}
   MinSpeed: 5
   MaxSpeed: 12
   currentSpeed: 0

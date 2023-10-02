@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     public static PlayerScript instance; 
     public float JumpForce;
     public float score;
+    private AudioSource Soundbox;
 
     [SerializeField]
     bool isGrounded = false;
@@ -25,6 +26,7 @@ public class PlayerScript : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         score = 0;
         Time.timeScale = 1;
+        audioSource = GameObject.Find("Soundbox").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,7 @@ public class PlayerScript : MonoBehaviour
             {
                 RB.AddForce(Vector2.up * JumpForce);
                 isGrounded = false;
+                Soundbox.Play();
             }
         }
 
